@@ -22,7 +22,7 @@
 
     <!-- JavaScript interface -->
     <js-module src="www/rollbar.js" name="RollbarJSInterface">
-        <clobbers target="window.Rollbar" />
+        <clobbers target="cordova.plugins.Rollbar" />
     </js-module>
 
     <!-- ios -->
@@ -43,7 +43,7 @@
         <config-file target="*-Info.plist" parent="RollbarAccessToken">
             <string>$ROLLBAR_ACCESS_TOKEN</string>
         </config-file>
-        
+
         <config-file target="*-Info.plist" parent="RollbarEnvironment">
             <string>$ROLLBAR_ENVIRONMENT</string>
         </config-file>

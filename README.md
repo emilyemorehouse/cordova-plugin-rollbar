@@ -24,7 +24,7 @@ cordova plugin add https://github.com/Resgrid/cordova-plugins-rollbar.git --vari
 ```
 
 ## Usage ##
-After device ready call the following line of code to initialize the Rollbar plugin. Note that the token and environment are pulled form the plugin vairables.
+After device ready call the following line of code to initialize the Rollbar plugin. Note that the token and environment are pulled form the plugin variables.
 
 ```
 cordova.plugins.Rollbar.init();

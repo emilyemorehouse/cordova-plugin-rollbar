@@ -23,6 +23,12 @@ You can install the plugin by running the following command.
 cordova plugin add https://github.com/emilyemorehouse/cordova-plugins-rollbar.git --variable ROLLBAR_ACCESS_TOKEN="<ROLLBAR_ACCESS_TOKEN>" --variable ROLLBAR_ENVIRONMENT="<ROLLBAR_ENVIRONMENT>"
 ```
 
+If you're using Cordova 7+, use the following command:
+
+```
+cordova plugin add https://github.com/emilyemorehouse/cordova-plugins-rollbar.git --variable ROLLBAR_ACCESS_TOKEN="<ROLLBAR_ACCESS_TOKEN>" --variable ROLLBAR_ENVIRONMENT="<ROLLBAR_ENVIRONMENT>" --nofetch
+```
+
 ## Usage ##
 After device ready call the following line of code to initialize the Rollbar plugin. Note that the token and environment are pulled form the plugin variables.
 

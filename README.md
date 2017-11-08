@@ -20,7 +20,7 @@ This plugin requires a Rollbar account. Sign up for your free Rollbar account [h
 You can install the plugin by running the following command.
 
 ```
-cordova plugin add https://github.com/Resgrid/cordova-plugins-rollbar.git --variable ROLLBAR_ACCESS_TOKEN="<ROLLBAR_ACCESS_TOKEN>" --variable ROLLBAR_ENVIRONMENT="<ROLLBAR_ENVIRONMENT>"
+cordova plugin add https://github.com/emilyemorehouse/cordova-plugins-rollbar.git --variable ROLLBAR_ACCESS_TOKEN="<ROLLBAR_ACCESS_TOKEN>" --variable ROLLBAR_ENVIRONMENT="<ROLLBAR_ENVIRONMENT>"
 ```
 
 ## Usage ##
@@ -38,7 +38,7 @@ window.cordova.plugins.Rollbar.init();
 ## Notes ##
 Currently in development, we welcome PR's and other fixes. Hope to have it production ready soon.
 
-## Author's ##
+## Authors ##
 * Shawn Jackson (Twitter: @DesignLimbo Blog: http://designlimbo.com)
 * Jason Jarrett (Twitter: @staxmanade Blog: http://staxmanade.com)
 

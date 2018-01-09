@@ -12,6 +12,18 @@ This plugin requires a Rollbar account. Sign up for your free Rollbar account [h
 You can install the plugin by running the following command.
 
 ```
+cordova plugin add cordova-plugin-rollbar --variable ROLLBAR_ACCESS_TOKEN="<ROLLBAR_ACCESS_TOKEN>" --variable ROLLBAR_ENVIRONMENT="<ROLLBAR_ENVIRONMENT>"
+```
+
+If you're using Cordova 7+, use the following command:
+
+```
+cordova plugin add cordova-plugin-rollbar --variable ROLLBAR_ACCESS_TOKEN="<ROLLBAR_ACCESS_TOKEN>" --variable ROLLBAR_ENVIRONMENT="<ROLLBAR_ENVIRONMENT>" --nofetch
+```
+
+To install the most recent version in development, use:
+
+```
 cordova plugin add https://github.com/emilyemorehouse/cordova-plugin-rollbar.git --variable ROLLBAR_ACCESS_TOKEN="<ROLLBAR_ACCESS_TOKEN>" --variable ROLLBAR_ENVIRONMENT="<ROLLBAR_ENVIRONMENT>"
 ```
 

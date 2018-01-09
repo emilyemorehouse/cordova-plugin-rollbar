@@ -21,10 +21,20 @@
 - (void)_setRoot;
 - (void)save;
 
+- (void)setMaximumTelemetryData:(NSInteger)maximumTelemetryData;
 - (void)setPersonId:(NSString*)personId username:(NSString*)username email:(NSString*)email;
+- (void)setServerHost:(NSString *)host root:(NSString*)root branch:(NSString*)branch codeVersion:(NSString*)codeVersion;
+- (void)setPayloadModificationBlock:(void (^)(NSMutableDictionary*))payloadModificationBlock;
+- (void)setCheckIgnoreBlock:(BOOL (^)(NSDictionary*))checkIgnoreBlock;
+- (void)addScrubField:(NSString *)field;
+- (void)removeScrubField:(NSString *)field;
+- (void)setRequestId:(NSString*)requestId;
+- (void)setCaptureLogAsTelemetryData:(BOOL)captureLog;
+- (void)setCaptureConnectivityAsTelemetryData:(BOOL)captureConnectivity;
 
 - (NSDictionary *)customData;
 
+@property (readonly, atomic) BOOL shouldCaptureConnectivity;
 @property (atomic, copy) NSString *accessToken;
 @property (atomic, copy) NSString *environment;
 @property (atomic, copy) NSString *endpoint;
@@ -32,5 +42,25 @@
 @property (readonly, atomic, copy) NSString *personId;
 @property (readonly, atomic, copy) NSString *personUsername;
 @property (readonly, atomic, copy) NSString *personEmail;
+
+// Modify payload
+@property (atomic, copy) void (^payloadModification)(NSMutableDictionary *payload);
+
+// Decides whether or not to send payload. Returns true to ignore, false to send
+@property (atomic, copy) BOOL (^checkIgnore)(NSDictionary *payload);
+
+// Fields to scrub from the payload
+@property (atomic, retain) NSMutableSet *scrubFields;
+
+/*** Optional ***/
+
+// ID to link request between client/server
+@property (atomic, copy) NSString *requestId;
+
+// Data about the server
+@property (readonly, atomic, copy) NSString *serverHost;
+@property (readonly, atomic, copy) NSString *serverRoot;
+@property (readonly, atomic, copy) NSString *serverBranch;
+@property (readonly, atomic, copy) NSString *serverCodeVersion;
 
 @end

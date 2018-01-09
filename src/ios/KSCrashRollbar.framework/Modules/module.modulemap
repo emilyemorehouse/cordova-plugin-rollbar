@@ -1,0 +1,6 @@
+framework module KSCrashRollbar {
+  umbrella header "KSCrashRollbar.h"
+
+  export *
+  module * { export * }
+}

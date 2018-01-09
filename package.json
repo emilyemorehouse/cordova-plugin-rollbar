@@ -22,7 +22,7 @@
       "ios"
     ]
   },
-  "author": "Shawn Jackson, Emily Morehouse",
+  "author": "Emily Morehouse",
   "license": "Apache 2.0",
   "bugs": {
     "url": "https://github.com/emilyemorehouse/cordova-plugins-rollbar/issues"

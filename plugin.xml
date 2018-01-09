@@ -10,7 +10,7 @@
       This plugin adds Rollbar App monitoring to your application. Currently supports iOS and Android. This plugin was created by Resgrid for use in our Ionic applications. You need to subscribe to the Rollbar service to use the plugin and make sure to set the ROLLBAR_ACCESS_TOKEN and ROLLBAR_ENVIRONMENT variables on install.
     </description>
     <license>Apache 2.0</license>
-    <keywords>resgrid, rollbar, crash, monitor, apm, error, exception, performance</keywords>
+    <keywords>rollbar, crash, monitor, apm, error, exception, performance</keywords>
     <engines>
         <engine name="cordova" version=">=3.3.0" />
     </engines>

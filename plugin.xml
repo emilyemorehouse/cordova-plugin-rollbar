@@ -3,19 +3,14 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="resgrid.cordova.plugins.rollbar"
-    version="1.4.0">
-
+    id="cordova.plugin.rollbar"
+    version="1.0.0">
     <name>Rollbar</name>
-
     <description>
       This plugin adds Rollbar App monitoring to your application. Currently supports iOS and Android. This plugin was created by Resgrid for use in our Ionic applications. You need to subscribe to the Rollbar service to use the plugin and make sure to set the ROLLBAR_ACCESS_TOKEN and ROLLBAR_ENVIRONMENT variables on install.
     </description>
-
     <license>Apache 2.0</license>
-
     <keywords>resgrid, rollbar, crash, monitor, apm, error, exception, performance</keywords>
-
     <engines>
         <engine name="cordova" version=">=3.3.0" />
     </engines>
@@ -61,7 +56,7 @@
         <preference name="ROLLBAR_ENVIRONMENT" />
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="CDVRollbar">
-                <param name="android-package" value="resgrid.cordova.plugins.rollbar.CDVRollbar" />
+                <param name="android-package" value="cordova.plugin.rollbar.CDVRollbar" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
@@ -73,8 +68,8 @@
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/*">
-            <meta-data android:name="resgrid.cordova.plugins.rollbar.AccessToken" android:value="@string/rollbar_access_token"/>
-            <meta-data android:name="resgrid.cordova.plugins.rollbar.Environment" android:value="@string/rollbar_environment"/>
+            <meta-data android:name="cordova.plugin.rollbar.AccessToken" android:value="@string/rollbar_access_token"/>
+            <meta-data android:name="cordova.plugin.rollbar.Environment" android:value="@string/rollbar_environment"/>
             <!-- PhoneGap adds the INTERNET permission by itself -->
             <uses-permission android:name="android.permission.READ_LOGS"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>

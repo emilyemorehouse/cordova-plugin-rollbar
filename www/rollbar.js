@@ -14,4 +14,8 @@ Rollbar.init = function(successCallback, errorCallback){
   return exec(successCallback, errorCallback, "CDVRollbar", "init", []);
 };
 
+Rollbar.simulateCrash = function(successCallback, errorCallback){
+  return exec(successCallback, errorCallback, "CDVRollbar", "simulateCrash", []);
+};
+
 module.exports = Rollbar;

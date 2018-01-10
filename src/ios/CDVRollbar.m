@@ -1,7 +1,5 @@
 //
 //  Rollbar Cordova iOS Plugin
-//	by Resgrid (http://resgrid.com)
-//  
 //
 
 #import "CDVRollbar.h"
@@ -10,14 +8,14 @@
 
 - (void)pluginInitialize
 {
-	NSString *RollbarAccessToken = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"RollbarAccessToken"];
-	NSString *RollbarEnvironment = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"RollbarEnvironment"];
-	
-	RollbarConfiguration *config = [RollbarConfiguration configuration];
-	config.crashLevel = @"critical";
-	config.environment = RollbarEnvironment;
+    NSString *RollbarAccessToken = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"RollbarAccessToken"];
+    NSString *RollbarEnvironment = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"RollbarEnvironment"];
 
-	[Rollbar initWithAccessToken:RollbarAccessToken configuration:config];
+    RollbarConfiguration *config = [RollbarConfiguration configuration];
+    config.crashLevel = @"critical";
+    config.environment = RollbarEnvironment;
+
+    [Rollbar initWithAccessToken:RollbarAccessToken configuration:config];
 }
 
 - (void)init:(CDVInvokedUrlCommand *)command
@@ -25,5 +23,10 @@
 
 }
 
-@end
+- (void)simulateCrash:(CDVInvokedUrlCommand *)command
+{
+    NSLog( @"forcing crash" );
+    exit(0);
+}
 
+@end

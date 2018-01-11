@@ -1,3 +1,7 @@
+## 1.2.1
+
+* Bugfix - rogue 'plugins' directory reference.
+
 ## 1.2.0
 
 * Fixed Android version - was previously referencing an invalid package. `resgrid.cordova.plugins.rollbar` is now simply `cordova.plugin.rollbar`.

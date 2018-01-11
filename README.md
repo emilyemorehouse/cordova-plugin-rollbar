@@ -40,21 +40,21 @@ cordova plugin add https://github.com/emilyemorehouse/cordova-plugin-rollbar.git
 After the device is ready, call the following line of code to initialize the Rollbar plugin. Note that the token and environment are pulled form the plugin variables.
 
 ```
-window.cordova.plugins.Rollbar.init();
+window.cordova.plugin.Rollbar.init();
 ```
 
 There are many ways to wait until the device ready event has fired, but here is one example:
 
 ```
 $ionicPlatform.ready(function() {
-    window.cordova.plugins.Rollbar.init();
+    window.cordova.plugin.Rollbar.init();
 }
 ```
 
 #### Debugging ####
 On iOS, there is a helper method to simulate a crash. To do so, simply call:
 ```
-window.cordova.plugins.Rollbar.simulateCrash();
+window.cordova.plugin.Rollbar.simulateCrash();
 ```
 
 

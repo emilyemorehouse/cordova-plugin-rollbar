@@ -1,4 +1,4 @@
-package resgrid.cordova.plugins.rollbar;
+package cordova.plugin.rollbar;
 
 import java.net.URL;
 
@@ -34,25 +34,25 @@ public class CDVRollbar extends CordovaPlugin {
         Context context = this.cordova.getActivity();
         packageName = context.getPackageName();
         Resources resources = context.getResources();
-        
+
         String rollbarAccessToken = context.getString(resources.getIdentifier(ROLLBAR_ACCESS_TOKEN, STRING, packageName));
         String rollbarEnvironment = context.getString(resources.getIdentifier(ROLLBAR_ENVIRONMENT, STRING, packageName));
-        
+
         Log.v(TAG, "Initializing Rollbar with token (" + rollbarAccessToken + ") and environment ("  + rollbarEnvironment + ")");
-        
+
         try {
             Rollbar.init(context, rollbarAccessToken, rollbarEnvironment);
         } catch (Exception e) {
             Log.e(TAG, "Initializing Rollbar failed", e);
         }
-        
+
         super.initialize(cordova, webView);
     }
 
     @Override
     public boolean execute(String action, final JSONArray args,
                            CallbackContext callbackContext) throws JSONException {
-                           
+
         /**
 		 * For right now we call Rollbar on initialize to get it monitoring as soon as possible. Other operations will be added here in the future.
 		 */

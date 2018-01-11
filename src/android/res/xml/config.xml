@@ -1,1 +1,1 @@
-<plugin name="CDVRollbar" value="resgrid.cordova.plugins.rollbar.CDVRollbar"/>
+<plugin name="CDVRollbar" value="cordova.plugin.rollbar.CDVRollbar"/>

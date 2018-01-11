@@ -7,7 +7,7 @@
     version="1.1.0">
     <name>Rollbar</name>
     <description>
-      This plugin adds Rollbar App monitoring to your application. Currently supports iOS and Android. This plugin was created by Resgrid for use in our Ionic applications. You need to subscribe to the Rollbar service to use the plugin and make sure to set the ROLLBAR_ACCESS_TOKEN and ROLLBAR_ENVIRONMENT variables on install.
+      This plugin adds Rollbar App monitoring to your application. Currently supports iOS and Android. You need to subscribe to the Rollbar service to use the plugin and make sure to set the ROLLBAR_ACCESS_TOKEN and ROLLBAR_ENVIRONMENT variables on install.
     </description>
     <license>Apache 2.0</license>
     <keywords>rollbar, crash, monitor, apm, error, exception, performance</keywords>
@@ -17,7 +17,7 @@
 
     <!-- JavaScript interface -->
     <js-module src="www/rollbar.js" name="RollbarJSInterface">
-        <clobbers target="cordova.plugins.Rollbar" />
+        <clobbers target="cordova.plugin.Rollbar" />
     </js-module>
 
     <!-- ios -->
@@ -80,7 +80,7 @@
         <source-file src="src/android/RollbarSDK/rollbar-android-0.1.2.jar" target-dir="libs/" framework="true"/>
 
         <!-- cordova plugin src files -->
-        <source-file src="src/android/resgrid/cordova/plugins/CDVRollbar.java" target-dir="src/resgrid/cordova/plugins/rollbar" />
+        <source-file src="src/android/cordova/plugins/CDVRollbar.java" target-dir="src/cordova/plugins/rollbar" />
 
     </platform>
 

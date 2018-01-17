@@ -74,6 +74,8 @@ window.cordova.plugins.Rollbar.simulateCrash();
 
 **Note:** Most errors will NOT be reported when running in a simulator or in a development mode (basically, anytime a debugger such as lldb or adb is attached). You must build a non-development version of your app to get crash reports, such as an [Ad Hoc IPA](https://help.apple.com/xcode/mac/current/#/dev7ccaf4d3c) or a [release APK](https://ionicframework.com/docs/v1/guide/publishing.html#android-publishing).
 
+And don't forget.. The app crashed, and therefore cannot report the error until the app is reopened!
+
 
 ## Authors ##
 * Emily Morehouse (Twitter: @emilyemorehouse Blog: http://emilyemorehouse.com)

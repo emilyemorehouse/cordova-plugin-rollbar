@@ -43,9 +43,6 @@
             <string>$ROLLBAR_ENVIRONMENT</string>
         </config-file>
 
-        <!-- CrashReporter Lib -->
-        <framework src="src/ios/CrashReporter.framework" custom="true" />
-
         <!-- Rollbar Lib -->
         <framework src="src/ios/Rollbar.framework" custom="true" />
     </platform>

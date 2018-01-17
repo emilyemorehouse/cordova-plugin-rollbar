@@ -1,3 +1,13 @@
+## 1.3.0
+
+* Upgraded Rollbar-iOS verision to v1.0.0-alpha5
+* Added documentation on testing crashes
+* Updated iOS simulateCrash method to crash in a way that will be reported
+
+### Breaking changes:
+
+Plugin must be accessed through `window.cordova.plugins.rollbar` instead of `window.cordova.plugin.rollbar` to following naming conventions.
+
 ## 1.2.1
 
 * Bugfix - rogue 'plugins' directory reference.

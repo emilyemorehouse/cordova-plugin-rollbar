@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-rollbar",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "This plugin adds Rollbar App monitoring to your application. Currently supports iOS and Android. You need to subscribe to the Rollbar service to use the plugin and make sure to set the ROLLBAR_ACCESS_TOKEN and ROLLBAR_ENVIRONMENT variables on install.",
   "main": "index.js",
   "repository": {

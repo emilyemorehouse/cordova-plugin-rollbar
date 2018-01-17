@@ -26,7 +26,7 @@
 - (void)simulateCrash:(CDVInvokedUrlCommand *)command
 {
     NSLog( @"forcing crash" );
-    exit(0);
+    kill( getpid(), SIGABRT );
 }
 
 @end

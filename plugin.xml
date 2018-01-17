@@ -17,7 +17,7 @@
 
     <!-- JavaScript interface -->
     <js-module src="www/rollbar.js" name="RollbarJSInterface">
-        <clobbers target="cordova.plugin.Rollbar" />
+        <clobbers target="cordova.plugins.Rollbar" />
     </js-module>
 
     <!-- ios -->
@@ -42,9 +42,6 @@
         <config-file target="*-Info.plist" parent="RollbarEnvironment">
             <string>$ROLLBAR_ENVIRONMENT</string>
         </config-file>
-
-        <!-- CrashReporter Lib -->
-        <framework src="src/ios/CrashReporter.framework" custom="true" />
 
         <!-- Rollbar Lib -->
         <framework src="src/ios/Rollbar.framework" custom="true" />

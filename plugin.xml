@@ -17,7 +17,7 @@
 
     <!-- JavaScript interface -->
     <js-module src="www/rollbar.js" name="RollbarJSInterface">
-        <clobbers target="cordova.plugin.Rollbar" />
+        <clobbers target="cordova.plugins.Rollbar" />
     </js-module>
 
     <!-- ios -->

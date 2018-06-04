@@ -44,7 +44,7 @@
         </config-file>
 
         <!-- Rollbar Lib -->
-        <framework src="src/ios/Rollbar.framework" custom="true" />
+        <framework src="Rollbar" type="podspec" spec="~> 1.0.0-alpha11" />
     </platform>
 
     <!-- android -->

@@ -1,4 +1,4 @@
-## 1.3.0
+## 1.4.0
 
 - Upgraded Rollbar-iOS verision to v1.0.0-alpha11
 - Rollbar-iOS is now included as a Pod instead of keeping a copy of the framework directly
